@@ -1,0 +1,12 @@
+#Setintro 
+
+StevenJamesUntil= "C:/Users/katherine_rivas/Downloads/StevenJamesUntil.wav"
+
+sample StevenJamesUntil
+sleep 40
+
+#was suposed to be heartbeat
+4.times do
+  sample :drum_bass_soft,beat_stretch: 1
+  sleep 1
+end
