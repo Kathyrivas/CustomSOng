@@ -1,0 +1,16 @@
+#Transtition 
+
+vol=1 
+
+# make function to lower the volume gradually
+define :fade do
+  30.times do
+    vol = vol - 0.1
+    set_volume! vol
+    print vol
+    sleep 1
+  end
+end
+
+#call fade to lower the volume
+fade
