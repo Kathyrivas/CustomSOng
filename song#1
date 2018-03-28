@@ -1,0 +1,60 @@
+#Song #1
+
+vol = 1
+use_bpm 65
+use_synth :piano
+
+
+4.times do
+  sample :drum_bass_soft,beat_stretch: 1
+  sleep 1
+end
+
+bassrf_notes= [ :E3, :A3, :Cs3, :D4, :E4, :Cs5, :B4, :E4, :Cs5, :B4, :A4, :A4, :A3, :B3, :Cs4, :Cs4, :D4, :E1, :D4, :Cs4, :B3, :A4, :B4, :A4, :Gs4 ]
+bassrf_sleeps= [ 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 1, 0.25, 0.25, 1.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25,  0.25, 0.25, 0.25, 0.25 ]
+index2=0
+
+
+
+25.times do
+  sample :ambi_bass
+  use_synth :fm
+  play bassrf_notes[index2]
+  sleep bassrf_sleeps[index2]
+  index2=index2+1
+end
+
+
+melody_notes= [ :A4, :A4, :E5, :A4, :A5, :B4, :A5, :Gs5, :A5, :A4, :E5, :A4, :A5, :B5, :A5, :Gs5, :A5, :B5, :C6, :D6, :E6, :Cs6, :B5, :A5, :G5, :B4, :A4, :B5, :A5, :Gs5 ]
+melody_sleeps= [0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.25, 0.5, 0.25, 0.25, 0.25, 0.25 ]
+
+in_thread do
+  live_loop :melody do
+    index=0
+    30.times do
+      play melody_notes[index]
+      sleep melody_sleeps[index]
+      index=index+1
+    end
+  end
+  
+  in_thread do
+    live_loop :luuppi do
+      sample :loop_breakbeat,beat_stretch: 4, amp: 0.8
+      sleep 4
+    end
+  end
+end
+
+# make function to lower the volume gradually
+define :fade do
+  30.times do
+    vol = vol - 0.1
+    set_volume! vol
+    print vol
+    sleep 1
+  end
+end
+
+#call fade to lower the volume
+fade
