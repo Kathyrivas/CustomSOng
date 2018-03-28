@@ -1,0 +1,50 @@
+#Custom Song #2
+
+
+use_bpm 65
+use_synth :piano
+
+#Beginning
+sadnotes_notes=[ :G, :Eb, :C, :Ab, :G, :Eb , :G, :Eb, :C, :Ab, :C, :F, :Bb, :D, :G, :G, :Eb, :C, :Ab, :G, :Eb, :C, :Ab, :C, :F, :G, :D, :Bb, :G, :D, :Bb, :G, :Eb, :C, :AB ]
+sadnotes_sleeps=[0, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2 ,0 , 0, 2, 0, 0, 0, 0.4, 0, 0,2, 0, 0, 2, 0, 0, 0 ]
+index=0
+
+35.times do
+  play sadnotes_notes[index]
+  sleep sadnotes_sleeps[index]
+  index=index+1
+end
+
+#Semi Chorus
+sadnotes1_notes=[ :G, :Eb, :Ab, :G, :F, :F, :Eb, :G, :Eb, :F, :Eb, :Eb, :F, :Eb, :F, :G, :Eb, :F, :G, :Eb, :Ab, :G, :F, :F, :Eb, :G, :Eb, :F, :Eb, :F, :Eb, :G, :Eb, :F ]
+sadnotes1_sleeps=[ 0.5, 0.4, 0.25, 0.25, 0.4, 0.25, 0.25, 0.2, 0.2, 0.2, 0.2, 0.25, 0.25, 0.25, 0.25, 0.6, 0.6, 0.25, 0.25, 0.4, 0.25 ]
+index=0
+
+34.times do
+  play sadnotes1_notes[index]
+  sleep sadnotes1_sleeps[index]
+  index=index+1
+end
+
+
+#Chorus
+sadnotes2_notes=[ :Eb, :D, :C, :G, :G, :F, :G, :F, :F, :G, :Eb, :D, :C, :G, :F, :G, :F, :F, :G, :Eb, :Eb, :D, :C, :G, :F, :G, :F, :F, :G, :Eb, :Eb, :Bb, :F, :f, :Eb, :Bb, :F, :F, :Eb, :Eb, :D, :C, :G, :G, :F, :G, :F, :F, :G, :Eb, :D, :C, :G, :G, :F, :G, :F, :F, :G, :Eb, :Eb, :D, :C, :G, :F, :G, :F, :F, :G, :Eb, :Eb, :Bb, :F, :F, :Eb, :Eb, :Bb, :F, :F, :Eb ]
+sadnotes2_sleeps=[ 0.6, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.6, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.60, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.4, 0.4, 0.25, 0.25, 0.4, 0.4, 0.25, 0.25, 0.3, 0.6, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.6, 0.25, 0.25, 0.6, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.4, 0.4, 0.25, 0.25, 0.4, 0.4, 0.4, 0.25, 0.25, 0.3 ]
+index=0
+
+63.times do
+  play sadnotes2_notes[index]
+  sleep sadnotes2_sleeps[index]
+  index=index+1
+end
+
+#Middle Sample
+sadnotes3_notes=[ :F, :G, :G, :Eb, :Ab, :G, :F, :Eb, :F, :G, :G, :Eb, :Ab, :G, :F, :Eb, :C , :G, :G, :G, :Ab , :G, :F, :Eb, :C, :G, :G, :G, :AB, :G, :F, :Eb, :C, :G, :Bb, :Ab, :G, :F, :Eb, :G, :G, :F, :G, :G, :F, :G, :G, :G, :G, :Ab, :G, :F, :Eb, :G, :G, :F, :G, :G, :F, :G, :G, :G, :Ab, :G, :F, :Eb ]
+sadnotes3_sleeps=[ 0.4, 0.25, 0.25, 0.3, 0.6, 0.3, 0.3, 0.3, 0.4, 0.25, 0.25, 0.3, 0.6, 0.3, 0.3, 0.3, 0.6, 0.6, 0.25, 0.25, 0.25, 0.3, 0.3, 0.3, 0.25, 0.6, 0.25, 0.6, 0.3, 0.25, 0.25, 0.25, 0.25, 0.25, 0.4, 0.25, 0.25, 0.4, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.4, 0.25, 0.25, 0.25, 0.3, 0.3, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, ]
+index=0
+
+40.times do
+  play sadnotes3_notes[index]
+  sleep sadnotes3_sleeps[index]
+  index=index+1
+end
